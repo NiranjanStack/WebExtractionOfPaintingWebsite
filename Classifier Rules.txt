@@ -1,0 +1,133 @@
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if Size < 1822 AND Size >= 1233.25
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 165
+ Predicted: classifier=Med = 0.45
+ Predicted: classifier=Low = 0.14
+ Predicted: classifier=Hig = 0.41
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Size < 397.73 or MISSING
+AND Mediums IS ONE OF: ACRYLIC, OIL, PAINT PAPER PHOTO AND PLASTIC, PAPER, OTHER, PAINT AND PAPER, PASTEL, INK, COLOR, COLOR AND DIGITAL, BLACK & WHITE, GELATIN, DIGITAL, PAPER AND PHOTO, CHARCOAL, BL
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 635
+ Predicted: classifier=Med = 0.20
+ Predicted: classifier=Low = 0.72
+ Predicted: classifier=Hig = 0.08
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if Size < 1233.25 AND Size >= 397.73
+AND Artist IS ONE OF: ALESSANDRO LA CIVITA, MICHAEL LENTZ, MARAT CHERNY, KELLY PUISSEGUR
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 27
+ Predicted: classifier=Med = 0.04
+ Predicted: classifier=Low = 0.96
+ Predicted: classifier=Hig = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 12
+*------------------------------------------------------------*
+if Views < 3444 or MISSING
+AND Size >= 1822 or MISSING
+then 
+ Tree Node Identifier   = 12
+ Number of Observations = 219
+ Predicted: classifier=Med = 0.18
+ Predicted: classifier=Low = 0.05
+ Predicted: classifier=Hig = 0.77
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if Views >= 3444
+AND Size >= 1822 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 8
+ Predicted: classifier=Med = 0.00
+ Predicted: classifier=Low = 0.63
+ Predicted: classifier=Hig = 0.38
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if Size < 397.73 or MISSING
+AND Mediums IS ONE OF: WOOD, METAL, CLAY, BLACK & WHITE AND GELATIN, CERAMIC AND CLAY or MISSING
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 49
+ Predicted: classifier=Med = 0.55
+ Predicted: classifier=Low = 0.29
+ Predicted: classifier=Hig = 0.16
+ 
+*------------------------------------------------------------*
+ Node = 18
+*------------------------------------------------------------*
+if Size < 1233.25 AND Size >= 397.73
+AND Artist IS ONE OF: PASCAL MARLIN, FLORA BORSI, IGOR VITOMIROV, MARIJAH BAC CAM
+then 
+ Tree Node Identifier   = 18
+ Number of Observations = 26
+ Predicted: classifier=Med = 0.96
+ Predicted: classifier=Low = 0.04
+ Predicted: classifier=Hig = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 26
+*------------------------------------------------------------*
+if Size < 58.595
+AND Mediums IS ONE OF: STONE, GLASS, BRONZE
+then 
+ Tree Node Identifier   = 26
+ Number of Observations = 7
+ Predicted: classifier=Med = 0.71
+ Predicted: classifier=Low = 0.14
+ Predicted: classifier=Hig = 0.14
+ 
+*------------------------------------------------------------*
+ Node = 27
+*------------------------------------------------------------*
+if Size < 397.73 AND Size >= 58.595 or MISSING
+AND Mediums IS ONE OF: STONE, GLASS, BRONZE
+then 
+ Tree Node Identifier   = 27
+ Number of Observations = 25
+ Predicted: classifier=Med = 0.00
+ Predicted: classifier=Low = 0.00
+ Predicted: classifier=Hig = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 28
+*------------------------------------------------------------*
+if Size < 1233.25 AND Size >= 397.73
+AND Mediums IS ONE OF: PAPER, PAPER AND PAINT, WOOD, METAL, PASTEL, COLOR AND DIGITAL, WATERCOLOR or MISSING
+AND Artist equals Missing
+then 
+ Tree Node Identifier   = 28
+ Number of Observations = 268
+ Predicted: classifier=Med = 0.47
+ Predicted: classifier=Low = 0.22
+ Predicted: classifier=Hig = 0.32
+ 
+*------------------------------------------------------------*
+ Node = 29
+*------------------------------------------------------------*
+if Size < 1233.25 AND Size >= 397.73
+AND Mediums IS ONE OF: ACRYLIC, OIL, INK, COLOR, BLACK & WHITE, DIGITAL, DIGITAL AND MANIPULATED, DIGITAL AND COLOR, CHARCOAL
+AND Artist equals Missing
+then 
+ Tree Node Identifier   = 29
+ Number of Observations = 161
+ Predicted: classifier=Med = 0.34
+ Predicted: classifier=Low = 0.48
+ Predicted: classifier=Hig = 0.17
+ 

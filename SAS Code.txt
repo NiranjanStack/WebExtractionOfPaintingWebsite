@@ -1,0 +1,22 @@
+PROC IMPORT 
+        DATAFILE= "E:\UNCC\Spring16\KBS\project\materials.xlsx"
+        DBMS=xlsx 
+     OUT=kbs 
+      REPLACE;
+    GETNAMES= YES;
+    RUN;
+
+	data kbs1;set kbs;
+	price_final=input(price,dollor10.);
+	run;
+
+	proc univariate data=kbs1;
+	var price_final;
+	run;
+
+	data kbs2;set kbs1;
+	if (price_final<500) then classifier='Low';
+  else if (price_final>=500 and price_final<2600) then classifier='Medium';
+  else if (price_final>=2600) then classifier='High';
+run;
+ 

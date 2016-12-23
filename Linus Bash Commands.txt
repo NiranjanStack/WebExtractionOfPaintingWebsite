@@ -1,0 +1,19 @@
+Following are the Linux Bash commands used to download the required data and extract some features: 
+
+1.	Extract Medium of the paintings
+
+	cat file.html | grep "bt:mediums" | awk -F "\"" '{print $4}' >> mediums.txt
+
+2.	Get Open Edition Availability
+
+	cat file.html | grep -A1 "Open Edition" | grep "<i" | awk -F ":" '{print $1}' | 
+	awk '{print $4 " " $5}' | wc -l
+
+3.	Extract published date of painting
+
+	date -d @`cat file.html | grep "bt:pubDate" | awk -F "\"" '{print $4}' |
+	cut -c1-10` +'%Y-%m-%d' >> pubdate.txt
+
+4.	Extract the Subject of paintings
+
+	cat file.html | grep "bt:subject" | awk -F "\"" '{print $4}' >> subject.txt
